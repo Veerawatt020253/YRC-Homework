@@ -1,0 +1,31 @@
+<footer>
+    <div class="s-footer p-4 d-block">
+        <div class="row row-cols-1 row-cols-lg-2 d-block d-lg-flex w-100 m-auto container p-3  mt-3">
+            <div class="m-auto w-lg-50 col" style="overflow-wrap: break-word;">
+                <h3 class="fs-2 " style="color: #a422cc;">แหล่งอ้างอิง</h3>
+                <a href="./ความสามัคคีคือพลัง.doc"
+                    class="footer-link">1.http://www.thairath.co.th/content/61390</a><br>
+                
+
+            </div>
+            <div class="m-auto w-lg-50 col mt-3" style="overflow-wrap: break-word;">
+                <h3 class="fs-2 " style="color: #ffe400;">เกี่ยวกับเรา</h3>
+                <p class="text-light">เว็บไซต์จัดทำขึ้นเพื่อใช้ในการประกวดการสร้าง Webpage
+                    ประเภท
+                    Web Editor ระดับชั้น ม.1-3 ในงานศิลปหัตถกรรมนักเรียน
+                    ครั้งที่
+                    71 ระดับ ชาติ ปีการศึกษา 2566 โรงเรียนยุพราชวิทยาลัย
+                    อำเภอเมือง จังหวัดเชียงใหม่
+                    สำนักงานเขตพื้นที่การศึกษามัธยมศึกษาเชียงใหม่ กลุ่ม
+                    1</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="bg-dark text-light text-center p-4">
+        <div class="fs-4">&copy;Coryright Yupparaj wittayalai school</div><br>
+        <div class="fs-5">โรงเรียนยุพราชวิทยาลัย</div><br>
+    </div>
+    <a name id class="btn btn-outline-warning bt" href="#" role="button">Back
+        to top</a>
+</footer>

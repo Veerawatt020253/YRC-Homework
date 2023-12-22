@@ -1,0 +1,19 @@
+ background: -webkit-linear-gradient(#a422cc, rgb(0, 119, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+function showpass() {
+    let password = document.querySelectorAll('.password');
+    
+    password.forEach(pass => {
+
+        if (pass.type == "password") {
+            pass.type = "text"
+        } else {
+            pass.type = "password"
+        }
+
+    })
+    
+}

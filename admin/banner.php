@@ -1,0 +1,2 @@
+<video src="../banner/banner.mp4" muted loop autoplay playsinline class="w-100 d-block"></video>
+<marquee behavior="left" class="w-100 d-block" direction="">เว็บนี้จัดทำโดยนักเรียนโรงเรียนยุพราชวิทยาลัย ระบบนี้จัดทำขึ้นเพื่อใช้ในการส่วนตัวเท่านั้นไม่มีการเกี่ยวข้องกับโรงเรียน และครูภายในโรงเรียนใดๆทั้งสิ้น</marquee>
