@@ -111,7 +111,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $password = $_POST['password'];
 
     //check username  & password
-    $stmt = $conn->prepare("SELECT id, name, surname FROM admin WHERE username = :username AND password = :password");
+    $stmt = $conn->prepare("SELECT id, name, surname, username, role FROM admin WHERE username = :username AND password = :password");
     $stmt->bindParam(':username', $username, PDO::PARAM_STR);
     $stmt->bindParam(':password', $password, PDO::PARAM_STR);
     $stmt->execute();
@@ -122,17 +122,18 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         //สร้างตัวแปร session
         $_SESSION['id'] = $row['id'];
+        $_SESSION['username'] = $row['username'];
         $_SESSION['name'] = $row['name'];
         $_SESSION['surname'] = $row['surname'];
+        $_SESSION['role'] = $row['role'];
 
         //เช็คว่ามีตัวแปร session อะไรบ้าง
-        //print_r($_SESSION);
+        // print_r($_SESSION);
 
         // exit();
 
-        echo "<script>location.href = './admin/index.php'</script>";
+         echo "<script>location.href = './admin/admin.php'</script>";
 
-        header('Location: index.php'); //login ถูกต้องและกระโดดไปหน้าตามที่ต้องการ
     } else { //ถ้า username or password ไม่ถูกต้อง
 
         echo '<script>

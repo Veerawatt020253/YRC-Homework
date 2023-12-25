@@ -1,5 +1,7 @@
 <?php
 
+include('./view-c.php');
+
 session_start();
 
 include('./link.php');
@@ -9,7 +11,7 @@ require_once "config/conn.php";
 $name = $_SESSION['name'];
 $surname = $_SESSION['surname'];
 $user_id = $_SESSION['id'];
-
+$role = $_SESSION['role'];
 
 if ($name == null) {
     $_SESSION['login'] = false;
@@ -23,6 +25,10 @@ if ($name == null) {
     $html_login = "d-none";
     $html_name = "d-block";
     $surname = $_SESSION['surname'];
+}
+
+if ($role == "admin") {
+    echo '<script>window.location.href = "./admin"</script>';
 }
 
 ?>
@@ -56,7 +62,7 @@ if ($name == null) {
 
             <div class="container mt-3">
                 <p class="index-title">
-                <h2>สวัสดีคุณ <b><?php echo $name; ?> <?php echo $surname; ?> </b></h2>
+                <h2>สวัสดีคุณ <b><?php echo $role; ?> <?php echo $surname; ?> </b></h2>
                 </p>
                 <div class="container">
                     <!-- AI DIV -->
@@ -88,7 +94,7 @@ if ($name == null) {
                                 <div class="top-menu p-2 fs-4">
 
                                     <img src="./img/yrc_logo.png" class="title-icon p-1 m-0" alt="">
-                                    TODO LIST
+                                    TODO LIST <a class="btn btn-outline-primary btn-sm " href="add-homework.php" role="button"> + </a>
 
                                 </div>
                             </a>

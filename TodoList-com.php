@@ -2,6 +2,8 @@
 
 require_once "config/conn-mysqli.php";
 
+echo '<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>';
+
 $sql = "SELECT * FROM todo WHERE owner = $user_id";
 $result = $connect->query($sql);
 
@@ -12,7 +14,7 @@ $result = $connect->query($sql);
             <tr>
                 <th scope="col">สิ่งที่ต้องทำ</th>
                 <th scope="col">สถานะ</th>
-                <th scope="col">เวลา</th>
+                <th scope="col">วันที่</th>
             </tr>
         </thead>
         <tbody>

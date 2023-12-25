@@ -12,10 +12,7 @@ $user_id = $_SESSION['id'];
 $username = $_SESSION['username'];
 $role = $_SESSION['role'];
 
-if ($role != "admin") {
-    echo '<script>window.location.href = "../index.php"</script>';
-}
-
+$table = "member";
 
 if ($name == null) {
     $_SESSION['login'] = false;
@@ -73,32 +70,38 @@ if ($name == null) {
                             <div class="top-menu p-2 fs-4">
 
                                 <img src="../img/yrc_logo.png" class="title-icon p-1 m-0" alt="">
-                                Admin menu
+                                Form Update <b><?php echo $table ?></b>
 
                             </div>
 
                             <!-- content -->
-                            <div class="row mt-3">
-                                <div class="col-lg-3 col-6">
-
-                                    <?php include('./v-member-com.php') ?>
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <br>
+                                    <form action="save.php" method="post">
+                                        <div class="form-group">
+                                            table : <input type="text" name="table" readonly value="<?php echo $table ?>" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            name : <input type="text" name="name" required value="" class="form-control" placeholder="ชื่อ">
+                                        </div>
+                                        <div class="form-group">
+                                            surname : <input type="text" name="surname" required value="" class="form-control" placeholder="นามสกุล">
+                                        </div>
+                                        <div class="form-group">
+                                            username : <input type="text" name="username" required value="" class="form-control" placeholder="ชื่อผู้ใช้">
+                                        </div>
+                                        <div class="form-group">
+                                            password : <input type="text" name="password" required value="" class="form-control" placeholder="รหัสผ่าน">
+                                        </div>
+                                        <div class="form-group">
+                                            role : <input type="text" name="role" required value="" class="form-control" placeholder="ยศ">
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary w-100">save</button>
+                                        </div>
+                                    </form>
                                 </div>
-
-                                <div class="col-lg-3 col-6">
-
-                                    <?php include("./v-news-com.php"); ?>
-                                </div>
-
-                                <div class="col-lg-3 col-6">
-
-                                    <?php include('./v-homework-com.php') ?>
-                                </div>
-
-                                <div class="col-lg-3 col-6">
-
-                                    <?php include('./viewer-com.php') ?>
-                                </div>
-
                             </div>
                         </div>
                     </div>

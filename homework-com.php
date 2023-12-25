@@ -14,7 +14,7 @@ $result = $connect->query($sql);
                 <th scope="col">ครู</th>
                 <th scope="col">เรื่อง</th>
                 <th scope="col">คะแนน *</th>
-                <th scope="col">เวลา</th>
+                <th scope="col">วันที่</th>
             </tr>
         </thead>
         <tbody>

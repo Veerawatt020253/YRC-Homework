@@ -15,10 +15,10 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../index.php">หน้าแรก</a>
+                            <a class="nav-link active" aria-current="page" href="./admin.php">หน้าแรก</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../c/c1.html">NEWS</a>
+                            <a class="nav-link" href="./member.php">member</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href=".../c/c2.html">TodoList</a>
@@ -72,7 +72,7 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="../index.php" aria-current="page">หน้าแรก <span class="visually-hidden">(current)</span></a>
+                        <a class="nav-link active" href="./admin.php" aria-current="page">หน้าแรก <span class="visually-hidden">(current)</span></a>
                     </li>
 
                     <li class="nav-item dropdown">

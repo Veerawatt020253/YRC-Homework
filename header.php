@@ -18,7 +18,7 @@
                             <a class="nav-link active" aria-current="page" href="./index.php">หน้าแรก</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./c/c1.html">NEWS</a>
+                            <a class="nav-link" href="./news.php">NEWS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../c/c2.html">TodoList</a>
@@ -78,7 +78,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">เมนู</a>
                         <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="./c/c1.html">NEWS</a>
+                            <a class="dropdown-item" href="./news.php">NEWS</a>
                             <a class="dropdown-item" href="./c/c2.html">TodoList</a>
                             <a class="dropdown-item" href="./c/c3.html">Homework</a>
                             <a class="dropdown-item" href="./c/c4.html">title</a>

@@ -59,9 +59,9 @@ if ($name == null) {
     <div class="mt-0 mb-3">
         
             <?php include('./banner.php'); ?>
-            <div class="row">
-                <div class="col-3"></div>
-                <div class="col-6"> <br>
+            <div class="">
+                
+                <div class="container"> <br>
                     <h4>Homework : เข้าสู่ระบบ</h4>
                     <form action="" method="post">
                         <div class="mb-2">
@@ -81,7 +81,7 @@ if ($name == null) {
                         </div>
                     </form>
                 </div>
-                <div class="col-3"></div>
+                
             </div>
     </div>
     <?php include_once('./footer.php'); ?>
@@ -111,7 +111,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     $password = $_POST['password'];
 
     //check username  & password
-    $stmt = $conn->prepare("SELECT id, name, surname FROM member WHERE username = :username AND password = :password");
+    $stmt = $conn->prepare("SELECT id, username, name, surname, role FROM member WHERE username = :username AND password = :password");
     $stmt->bindParam(':username', $username, PDO::PARAM_STR);
     $stmt->bindParam(':password', $password, PDO::PARAM_STR);
     $stmt->execute();
@@ -122,17 +122,24 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         //สร้างตัวแปร session
         $_SESSION['id'] = $row['id'];
+        $_SESSION['username'] = $row['username'];
         $_SESSION['name'] = $row['name'];
         $_SESSION['surname'] = $row['surname'];
+        $_SESSION['role'] = $row['role'];
+
+        $role = $_SESSION['role'];
 
         //เช็คว่ามีตัวแปร session อะไรบ้าง
         //print_r($_SESSION);
 
         // exit();
 
-        echo "<script>location.href = './index.php'</script>";
-
-        header('Location: index.php'); //login ถูกต้องและกระโดดไปหน้าตามที่ต้องการ
+        if ($role == "admin") {
+            echo "<script>location.href = './admin/admin.php'</script>";
+        } else {
+            echo $_SESSION;
+            // header("Location: ./index.php");
+        }
     } else { //ถ้า username or password ไม่ถูกต้อง
 
         echo '<script>

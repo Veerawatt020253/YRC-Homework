@@ -3,12 +3,12 @@
     src: url(../Framework/font/IBMPlexSansThai-Medium.ttf);
 }
 
-::webkit-scrollbar {
+::-webkit-scrollbar {
     width: 10px !important;
     background-color: black !important;
 }
 
-::webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: #FF1493   !important;
     border-radius: 10px     !important;
 }
@@ -154,4 +154,15 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,20,147,1) 1
 .news-a {
     text-decoration: none;
     color: black;
+}
+
+.edit-img {
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.news-a {
+    width: 50%;
+    height: 50%;
+    border-radius: 3px;
 }

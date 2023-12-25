@@ -3,12 +3,12 @@
     src: url(./Framework/font/IBMPlexSansThai-Medium.ttf);
 }
 
-::webkit-scrollbar {
+::-webkit-scrollbar {
     width: 10px;
     background-color: black;
 }
 
-::webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: #FF1493;
     border-radius: 10px;
 }
@@ -161,4 +161,11 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,20,147,1) 1
 .news-a {
     text-decoration: none;
     color: black;
+}
+
+.news-img {
+    border: 2px solid gray;
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
 }
