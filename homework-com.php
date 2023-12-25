@@ -7,7 +7,7 @@ $result = $connect->query($sql);
 
 ?>
 <div class="mt-3">
-    <table class="table">
+    <table class="table text-center">
         <thead>
             <tr>
                 <th scope="col">วิชา</th>

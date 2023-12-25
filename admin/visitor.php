@@ -12,6 +12,7 @@ $user_id = $_SESSION['id'];
 $username = $_SESSION['username'];
 $role = $_SESSION['role'];
 
+$table = "viewer";
 
 if ($name == null) {
     $_SESSION['login'] = false;
@@ -27,7 +28,7 @@ if ($name == null) {
     $surname = $_SESSION['surname'];
 }
 
-$sql = "SELECT * FROM viewer ORDER BY id DESC";
+$sql = "SELECT * FROM viewer ORDER BY id DESC LIMIT 20";
 $result = $connect->query($sql);
 
 ?>
@@ -79,7 +80,7 @@ $result = $connect->query($sql);
                             <!-- content -->
                             <div class="card mt-3">
                                 <div class="card-header">
-                                    <h3 class="card-title">ข้อมูลการเข้าชมเว็บไซต์</h3>
+                                    <h3 class="card-title">ข้อมูลการเข้าชมเว็บไซต์ <a class="btn btn-outline-primary btn-sm ms-3" href="del-all.php" role="button"> reset </a></h3>
                                 </div>
 
                                 <div class="card-body w-100">

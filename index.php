@@ -94,7 +94,7 @@ if ($role == "admin") {
                                 <div class="top-menu p-2 fs-4">
 
                                     <img src="./img/yrc_logo.png" class="title-icon p-1 m-0" alt="">
-                                    TODO LIST <a class="btn btn-outline-primary btn-sm " href="add-homework.php" role="button"> + </a>
+                                    TODO LIST <a class="btn btn-outline-light btn-sm ms-2" href="add-homework.php" role="button"> + </a>
 
                                 </div>
                             </a>

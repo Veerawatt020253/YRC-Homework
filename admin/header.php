@@ -3,7 +3,7 @@
     <nav class="navbar navbar-dark bg-dark fixed-top d-block d-lg-none">
         <div class="container-fluid">
             <img src="../img/yrc_logo.png" class="logo" alt>
-            <a class="navbar-brand" href="../index.php">Homework</a>
+            <a class="navbar-brand" href="./index.php">Homework</a>
             <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -65,7 +65,7 @@
     <nav class="navbar navbar-expand-lg fixed-top   navbar-dark bg-dark d-none d-lg-block ">
         <div class="container">
             <img src="../img/yrc_logo.png" class="logo" alt>&nbsp;&nbsp;
-            <a class="navbar-brand" href="../index.php">Homework</a>
+            <a class="navbar-brand" href="./index.php">Homework</a>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

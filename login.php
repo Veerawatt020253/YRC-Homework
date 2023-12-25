@@ -51,6 +51,8 @@ if ($name == null) {
     <link rel=”icon” type=”image/png href=”./img/yrc_logo.png” />
 
     <link rel="stylesheet" href="./style.css">
+    
+    <link rel="stylesheet" href="./Framework/sweetalert/sweetalert2.css">
 
 </head>
 
@@ -87,7 +89,7 @@ if ($name == null) {
     <?php include_once('./footer.php'); ?>
 </body>
 <script src="./Framework/bootstrap/js/bootstrap.bundle.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./Framework/sweetalert/sweetalert2.all.js"></script>
 <script src="https://kit.fontawesome.com/42b75145a7.js" crossorigin="anonymous"></script>
 </html>
 
@@ -99,9 +101,8 @@ if ($name == null) {
 if (isset($_POST['username']) && isset($_POST['password'])) {
     // sweet alert 
     echo '
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">';
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>';
 
     //ไฟล์เชื่อมต่อฐานข้อมูล
     require_once './config/conn.php';
@@ -137,21 +138,23 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
         if ($role == "admin") {
             echo "<script>location.href = './admin/admin.php'</script>";
         } else {
-            echo $_SESSION;
-            // header("Location: ./index.php");
+            // echo $_SESSION;
+             echo "<script>location.href = './admin/admin.php'</script>";
         }
     } else { //ถ้า username or password ไม่ถูกต้อง
 
         echo '<script>
-                       setTimeout(function() {
-                        swal({
-                            title: "เกิดข้อผิดพลาด",
-                             text: "Username หรือ Password ไม่ถูกต้อง ลองใหม่อีกครั้ง",
-                            type: "warning"
-                        }, function() {
-                            window.location = "login.php"; //หน้าที่ต้องการให้กระโดดไป
-                        });
-                      }, 1000);
+                       
+            $(document).ready(function() {
+                Swal.fire({
+                    title: "เกิดข้อผิดพลาด",
+                     text: "Username หรือ Password ไม่ถูกต้อง ลองใหม่อีกครั้ง",
+                    icon: "warning"
+                }, function() {
+                    window.location = "login.php"; //หน้าที่ต้องการให้กระโดดไป
+                });
+            })
+                      
                   </script>';
         $conn = null; //close connect db
     } //else
