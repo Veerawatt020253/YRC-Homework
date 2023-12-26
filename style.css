@@ -43,6 +43,19 @@ a {
     display: block;
     background-color: white;
     border-radius: 10px;
+    border: 1px solid gray;
+}
+
+.box-user {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.user-yrc-logo {
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    background-color: white;
 
 }
 
@@ -177,3 +190,18 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,20,147,1) 1
 .swal2-popup {
     font-family: ibm;
   }
+
+.user-dis {
+    background-color: #FF1493;
+    background-image: url(./img/School-Bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.about-cover {
+    background-color: #FF1493;
+    background-image: url(./img/School-Bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

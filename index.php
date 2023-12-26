@@ -4,6 +4,8 @@ include('./view-c.php');
 
 session_start();
 
+
+
 include('./link.php');
 
 require_once "config/conn.php";
@@ -31,6 +33,7 @@ if ($role == "admin") {
     echo '<script>window.location.href = "./admin"</script>';
 }
 
+include('./update.php');
 ?>
 
 <!doctype html>
@@ -62,7 +65,7 @@ if ($role == "admin") {
 
             <div class="container mt-3">
                 <p class="index-title">
-                <h2>สวัสดีคุณ <b><?php echo $role; ?> <?php echo $surname; ?> </b></h2>
+                <h2>สวัสดีคุณ <b><?php echo $name; ?> <?php echo $surname; ?> </b></h2>
                 </p>
                 <div class="container">
                     <!-- AI DIV -->

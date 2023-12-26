@@ -11,6 +11,12 @@ username = '" . $_POST["username"] . "' ,
 password = '" . $_POST["password"] . "' ,
 name = '" . $_POST["name"] . "' ,
 surname = '" . $_POST["surname"] . "' ,
+r_name = '" . $_POST["r-name"] . "' ,
+r_surname = '" . $_POST["r-surname"] . "' ,
+r_nickname = '" . $_POST["r-nickname"] . "' ,
+r_class = '" . $_POST["r-class"] . "' ,
+r_number = '" . $_POST["r-number"] . "' ,
+r_student_num = '" . $_POST["r-student-id"] . "' ,
 role = '" . $_POST["role"] . "' ";
 
 	$query = mysqli_query($connect, $sql);

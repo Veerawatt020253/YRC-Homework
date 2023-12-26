@@ -52,7 +52,7 @@ $owner = $_SESSION['id'];
 
     <link rel=”icon” type=”image/png href=”./img/yrc_logo.png” />
 
-    <link rel="stylesheet" href="./style1.css">
+    <link rel="stylesheet" href="./style.css">
 
 </head>
 

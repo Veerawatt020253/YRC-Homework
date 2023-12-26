@@ -75,27 +75,54 @@ if ($name == null) {
                             </div>
 
                             <!-- content -->
-                            <div class="row">
-                                <div class="col-sm-5">
+                            <div class="">
+                                <div class="">
                                     <br>
                                     <form action="save.php" method="post">
-                                        <div class="form-group">
-                                            table : <input type="text" name="table" readonly value="<?php echo $table ?>" class="form-control">
-                                        </div>
-                                        <div class="form-group">
-                                            name : <input type="text" name="name" required value="" class="form-control" placeholder="ชื่อ">
-                                        </div>
-                                        <div class="form-group">
-                                            surname : <input type="text" name="surname" required value="" class="form-control" placeholder="นามสกุล">
-                                        </div>
-                                        <div class="form-group">
-                                            username : <input type="text" name="username" required value="" class="form-control" placeholder="ชื่อผู้ใช้">
-                                        </div>
-                                        <div class="form-group">
-                                            password : <input type="text" name="password" required value="" class="form-control" placeholder="รหัสผ่าน">
-                                        </div>
-                                        <div class="form-group">
-                                            role : <input type="text" name="role" required value="" class="form-control" placeholder="ยศ">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-lg-6">
+                                                <div class="form-group">
+                                                    table : <input type="text" name="table" readonly value="<?php echo $table ?>" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    name : <input type="text" name="name" required value="" class="form-control" placeholder="ชื่อ">
+                                                </div>
+                                                <div class="form-group">
+                                                    surname : <input type="text" name="surname" required value="" class="form-control" placeholder="นามสกุล">
+                                                </div>
+                                                <div class="form-group">
+                                                    username : <input type="text" name="username" required value="" class="form-control" placeholder="ชื่อผู้ใช้">
+                                                </div>
+                                                <div class="form-group">
+                                                    password : <input type="text" name="password" required value="" class="form-control" placeholder="รหัสผ่าน">
+                                                </div>
+                                                <div class="form-group">
+                                                    role : <input type="text" name="role" required value="" class="form-control" placeholder="ยศ">
+                                                </div>
+
+                                            </div>
+                                            <div class="col-sm-12 col-lg-6">
+                                                
+                                                <div class="form-group">
+                                                    ชื่อจริง : <input type="text" name="r-name" required value="" class="form-control" placeholder="ชื่อจริง">
+                                                </div>
+                                                <div class="form-group">
+                                                    นามสกุล : <input type="text" name="r-surname" required value="" class="form-control" placeholder="นามสกุล">
+                                                </div>
+                                                <div class="form-group">
+                                                    ชื่อเล่น : <input type="text" name="r-nickname" required value="" class="form-control" placeholder="ชื่อเล่น">
+                                                </div>
+                                                <div class="form-group">
+                                                    ชั้น : <input type="text" name="r-class" required value="" class="form-control" placeholder="ชั้น">
+                                                </div>
+                                                <div class="form-group">
+                                                    เลขที่ : <input type="text" name="r-number" required value="" class="form-control" placeholder="เลขที่">
+                                                </div>
+                                                <div class="form-group">
+                                                    เลขประจำตัว : <input type="text" name="r-student-id" required value="" class="form-control" placeholder="เลขประจำตัว">
+                                                </div>
+
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <button type="submit" class="btn btn-primary w-100">save</button>

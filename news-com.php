@@ -2,7 +2,7 @@
 
 require_once "config/conn-mysqli.php";
 
-$sql = "SELECT * FROM news LIMIT 5";
+$sql = "SELECT * FROM news ORDER BY id DESC LIMIT 5 ";
 $result = $connect->query($sql);
 
 ?>

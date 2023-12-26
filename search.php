@@ -12,6 +12,7 @@ $name = $_SESSION['name'];
 $surname = $_SESSION['surname'];
 $user_id = $_SESSION['id'];
 $role = $_SESSION['role'];
+$keyword = $_GET['k'];
 
 if ($name == null) {
     $_SESSION['login'] = false;
@@ -33,7 +34,7 @@ if ($role == "admin") {
 
 require_once "config/conn-mysqli.php";
 
-$sql = "SELECT * FROM news ORDER BY id DESC";
+$sql = "SELECT * FROM homework WHERE subject LIKE '%".$keyword."%' OR teacher LIKE '%".$keyword."%' OR title LIKE '%".$keyword."%' OR point LIKE '%".$keyword."%' OR time LIKE '%".$keyword."%' ORDER BY id DESC";
 $result = $connect->query($sql);
 ?>
 
@@ -41,7 +42,7 @@ $result = $connect->query($sql);
 <html lang="en">
 
 <head>
-    <title>YRC13 - NEWS</title>
+    <title>YRC13 - Homework</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -69,7 +70,7 @@ $result = $connect->query($sql);
 
                         <div class="card mt-3">
                                 <div class="card-header">
-                                    <h3 class="card-title">ข่าว</h3>
+                                    <h3 class="card-title">การบ้าน</h3>
                                 </div>
 
                                 <div class="card-body w-100">
@@ -80,34 +81,31 @@ $result = $connect->query($sql);
                                                     <thead>
                                                         <tr>
                                     
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">หัวเรื่อง</th>
-                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">รูป</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">วิชา</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">ครู </th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">หัวเรื่อง</th>
+                                                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">คะแนน</th>
                                                             <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">วันที่</th>
-                                                            <th class="sorting text-center" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending">option</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                     <?php while ($row = $result->fetch_assoc()) : ?>
                                                         <tr class="odd">
                                                             
+                                                            <td><?php echo $row['subject']; ?></td>
+                                                            <td><?php echo $row['teacher'] ?></td>
                                                             <td><?php echo $row['title']; ?></td>
-                                                            <td><img src="<?php echo $row['img'] ?>" class="news-img" alt=""></td>
+                                                            <td><?php echo $row['point']; ?></td>
                                                             <td><?php echo $row['time']; ?></td>
-                                                            
-                                                            <td class="d-flex">
-                                
-                                                                        <a class="btn btn-danger btn-sm m-auto" href="./news-details.php?id=<?php echo $row['id'] ?>" role="button">อ่าน</a>
-                                                                
-                                                            </td>
                                                         </tr>
                                                     <?php endwhile ?>
                                                     </tbody>
                                                     <tfoot>
                                                         <tr>
                                                             
+                                                            <th rowspan="1" colspan="1">วิชา</th>
+                                                            <th rowspan="1" colspan="1">ครู</th>
                                                             <th rowspan="1" colspan="1">หัวเรื่อง</th>
-                                                            <th rowspan="1" colspan="1">รูป</th>
-                                                            <th rowspan="1" colspan="1">วันที่</th>
                                                             <th rowspan="1" colspan="1" class="text-center">option</th>
                                             
                                                         </tr>

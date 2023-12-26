@@ -86,10 +86,12 @@ if (isset($_GET['id'])) {
                                 </div>
 
                                 <!-- content -->
-                                <div class="row">
-                                    <div class="col-sm-5">
-                                        <br>
-                                        <form action="s_edit.php" method="post">
+
+                                <br>
+                                <form action="s_edit.php" method="post">
+                                    <div class="row">
+
+                                        <div class="col-sm-12 col-lg-6">
                                             <div class="form-group">
                                                 table : <input type="text" name="table" readonly value="<?php echo $table ?>" class="form-control">
                                             </div>
@@ -111,12 +113,39 @@ if (isset($_GET['id'])) {
                                             <div class="form-group">
                                                 role : <input type="text" name="role" required value="<?php echo $row['role']; ?>" class="form-control" placeholder="role">
                                             </div>
+                                        </div>
+                                        <div class="col-sm-12 col-lg-6">
+
+
                                             <div class="form-group">
-                                                <button type="submit" class="btn btn-primary w-100">save</button>
+                                                ชื่อจริง : <input type="text" name="r-name" required value="<?php echo $row['r_name'] ?>" class="form-control" placeholder="ชื่อจริง">
                                             </div>
-                                        </form>
+                                            <div class="form-group">
+                                                นามสกุล : <input type="text" name="r-surname" required value="<?php echo $row['r_surname'] ?>" class="form-control" placeholder="นามสกุล">
+                                            </div>
+                                            <div class="form-group">
+                                                ชื่อเล่น : <input type="text" name="r-nickname" required value="<?php echo $row['r_nickname'] ?>" class="form-control" placeholder="ชื่อเล่น">
+                                            </div>
+                                            <div class="form-group">
+                                                ชั้น : <input type="text" name="r-class" required value="<?php echo $row['r_class'] ?>" class="form-control" placeholder="ชั้น">
+                                            </div>
+                                            <div class="form-group">
+                                                เลขที่ : <input type="text" name="r-number" required value="<?php echo $row['r_number'] ?>" class="form-control" placeholder="เลขที่">
+                                            </div>
+                                            <div class="form-group">
+                                                เลขประจำตัว : <input type="text" name="r-student-id" required value="<?php echo $row['r_student_num'] ?>" class="form-control" placeholder="เลขประจำตัว">
+                                            </div>
+
+
+                                        </div>  
                                     </div>
-                                </div>
+
+
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary w-100">save</button>
+                                    </div>
+                                </form>
+
                             </div>
                         </div>
 

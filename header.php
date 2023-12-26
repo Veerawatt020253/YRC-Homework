@@ -21,17 +21,12 @@
                             <a class="nav-link" href="./news.php">NEWS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../c/c2.html">TodoList</a>
+                            <a class="nav-link" href="./todo_List.php">TodoList</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./c/c3.html">Homework</a>
+                            <a class="nav-link" href="./homework.php">Homework</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./c/c4.html">title</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./c/c5.html">title</a>
-                        </li>
+                        
                         <hr>
                         <!-- member -->
                         <div class="<?php echo $html_login; ?>">
@@ -39,24 +34,27 @@
                                 <a class="nav-link" href="./login.php">เข้าสู่ระบบ</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./c/c5.html">สมัครสมาชิก</a>
+                                <a class="nav-link" href="./register.php">สมัครสมาชิก</a>
                             </li>
                         </div>
                         <!-- username -->
                         <div class="<?php echo $html_name ?>">
                             <li class="nav-item">
-                                <a class="nav-link" href="./c/c5.html"><?php echo $_SESSION['name']; ?></a>
+                                <a class="nav-link" href="./user.php"><?php echo $_SESSION['name']; ?></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./logout.php">logout</a>
                             </li>
                         </div>
-<hr>
+                        <hr>
                         <li class="nav-item">
-                            <a class="nav-link" href="./c/AD.html">ติดต่อเรา</a>
+                            <a class="nav-link" href="./about.php">ติดต่อเรา</a>
                         </li>
                     </ul>
-
+                    <form class="d-block my-2 my-lg-0" method="get" action="search.php">
+                        <input class="form-control me-sm-2" type="text" name="k" placeholder="Search Homework">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -79,10 +77,8 @@
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">เมนู</a>
                         <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownId">
                             <a class="dropdown-item" href="./news.php">NEWS</a>
-                            <a class="dropdown-item" href="./c/c2.html">TodoList</a>
-                            <a class="dropdown-item" href="./c/c3.html">Homework</a>
-                            <a class="dropdown-item" href="./c/c4.html">title</a>
-                            <a class="dropdown-item" href="./c/c5.html">title</a>
+                            <a class="dropdown-item" href="./todo_List.php">TodoList</a>
+                            <a class="dropdown-item" href="./homework.php">Homework</a>
                             <hr>
 
                             <!-- member -->
@@ -90,13 +86,13 @@
                                 <a class="dropdown-item" href="./login.php">
                                     เข้าสู่ระบบ
                                 </a>
-                                <a class="dropdown-item" href="./c/c6.html">
+                                <a class="dropdown-item" href="./register.php">
                                     สมัครสมาชิก
                                 </a>
                             </div>
                             <!-- username -->
                             <div class="<?php echo $html_name ?>">
-                                <a class="dropdown-item" href="./c/c6.html">
+                                <a class="dropdown-item" href="./user.php">
                                     <?php echo $_SESSION['name']; ?>
                                 </a>
                                 <a class="dropdown-item" href="./logout.php">
@@ -108,11 +104,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="./c/AD.html">ติดต่อเรา</a>
+                        <a class="nav-link" href="./about.php">ติดต่อเรา</a>
                     </li>
                 </ul>
-                <form class="d-flex my-2 my-lg-0">
-                    <input class="form-control me-sm-2" type="text" placeholder="Search">
+                <form class="d-flex my-2 my-lg-0" method="get" action="search.php">
+                    <input class="form-control me-sm-2" type="text" name="k" placeholder="Search Homework">
                     <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
